@@ -35,6 +35,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:#fff;color:var(--body);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;}
+body.loading{overflow:hidden;}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
 @keyframes fadeRight{from{opacity:0;transform:translateX(28px);}to{opacity:1;transform:translateX(0);}}
@@ -319,9 +320,66 @@ footer{background:var(--dark);padding:3rem 3rem 1.8rem;}
 @media(max-width:480px){
   .srv-grid{grid-template-columns:1fr;}
 }
+
+/* ── LOADER ── */
+#loader{
+  position:fixed;inset:0;
+  background:var(--dark);
+  z-index:10000;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;
+  transition:transform .95s cubic-bezier(.77,0,.18,1);
+}
+#loader.hide{transform:translateY(-100%);}
+.loader-logo{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(2rem,5vw,3.8rem);
+  font-weight:700;letter-spacing:.03em;
+  display:flex;gap:0;overflow:hidden;
+}
+.loader-logo .lword{display:flex;}
+.loader-logo .lspace{width:.35em;}
+.loader-logo span{
+  display:inline-block;
+  opacity:0;transform:translateY(55px);
+  transition:opacity .4s ease,transform .4s ease;
+}
+.loader-logo .l-name span{color:#fff;}
+.loader-logo .l-suffix span{color:var(--blue-md);}
+.loader-line{
+  width:0;height:2px;
+  background:linear-gradient(90deg,var(--blue-md),var(--rose),var(--teal));
+  margin-top:18px;border-radius:2px;
+  transition:width .65s cubic-bezier(.4,0,.2,1);
+}
+.loader-sub{
+  font-family:'Inter',sans-serif;
+  font-size:.72rem;letter-spacing:.32em;
+  color:rgba(255,255,255,.38);
+  text-transform:uppercase;margin-top:14px;
+  opacity:0;transition:opacity .5s ease;
+}
 </style>
 </head>
-<body>
+<body class="loading">
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">
+    <div class="lword l-name">
+      <span>D</span><span>r</span>
+    </div>
+    <div class="lspace"></div>
+    <div class="lword l-name">
+      <span>C</span><span>o</span><span>s</span><span>t</span><span>i</span><span>n</span>
+    </div>
+    <div class="lspace"></div>
+    <div class="lword l-suffix">
+      <span>M</span><span>e</span><span>d</span><span>i</span><span>c</span><span>a</span>
+    </div>
+  </div>
+  <div class="loader-line" id="loaderLine"></div>
+  <div class="loader-sub" id="loaderSub">Cabinet Medical · Baia Mare</div>
+</div>
 
 <!-- Topbar -->
 <div class="topbar">
@@ -860,6 +918,45 @@ footer{background:var(--dark);padding:3rem 3rem 1.8rem;}
 </footer>
 
 <script>
+// ── LOADER ANIMATION ──────────────────────────────────────────
+(function(){
+  const loader  = document.getElementById('loader');
+  const letters = loader.querySelectorAll('.loader-logo span');
+  const line    = document.getElementById('loaderLine');
+  const sub     = document.getElementById('loaderSub');
+
+  let idx = 0;
+  function nextLetter(){
+    if(idx < letters.length){
+      const l = letters[idx];
+      l.style.opacity = '1';
+      l.style.transform = 'translateY(0)';
+      // slightly faster for consonants
+      const delay = 48 + (idx % 3 === 0 ? 8 : 0);
+      idx++;
+      setTimeout(nextLetter, delay);
+    } else {
+      // all letters in → expand line
+      setTimeout(()=>{
+        line.style.width = '220px';
+        // show sub
+        setTimeout(()=>{
+          sub.style.opacity = '1';
+          // hold then slide up
+          setTimeout(()=>{
+            loader.classList.add('hide');
+            document.body.classList.remove('loading');
+            setTimeout(()=>{ loader.style.display='none'; }, 1000);
+          }, 900);
+        }, 300);
+      }, 120);
+    }
+  }
+
+  // small initial delay so fonts load
+  setTimeout(nextLetter, 200);
+})();
+
 document.getElementById('hbg').addEventListener('click',()=>document.getElementById('mobmenu').classList.add('open'));
 document.getElementById('mobclose').addEventListener('click',closeMob);
 function closeMob(){document.getElementById('mobmenu').classList.remove('open');}
