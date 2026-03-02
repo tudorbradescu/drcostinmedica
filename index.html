@@ -3,29 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DentElite Sibiu | Clinică Stomatologică Premium</title>
-<meta name="description" content="Clinică stomatologică de top în Sibiu. Tratamente moderne, echipamente performante, zâmbete perfecte.">
+<title>Dr Costin Medica | Cabinet Medical Baia Mare</title>
+<meta name="description" content="Cabinet medical Dr Costin Medica din Baia Mare. Obstetrică-Ginecologie și Pediatrie-Endocrinologie. Ecograf 3D/4D Samsung, amniocenteză, consultatii specializate.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-/* ── TOKENS ── */
-:root{
-  --teal:#1a6b6b;
-  --teal-md:#2a9090;
-  --teal-lt:#d4eded;
-  --teal-xs:#f0f9f9;
-  --gold:#c4a96e;
-  --gold-lt:#fdf6e8;
-  --dark:#0d1c1c;
-  --body:#1e3333;
-  --muted:#5a7a7a;
-  --border:#daeaea;
+:root {
+  --blue:#1a5f8a;
+  --blue-md:#2a82b8;
+  --blue-lt:#dbeafe;
+  --blue-xs:#f0f7ff;
+  --rose:#9b3a6e;
+  --rose-lt:#fce7f3;
+  --rose-xs:#fdf2f8;
+  --teal:#1a7a7a;
+  --teal-lt:#ccf0ee;
+  --teal-xs:#f0fafa;
+  --dark:#0d1f2d;
+  --body:#1e3348;
+  --muted:#4a6580;
+  --border:#e0eaf2;
   --bg:#ffffff;
-  --bg2:#f6fafa;
+  --bg2:#f7fafc;
   --red:#c0392b;
-  --sh1:0 1px 4px rgba(26,107,107,.08);
-  --sh2:0 4px 20px rgba(26,107,107,.1);
-  --sh3:0 12px 48px rgba(26,107,107,.14);
+  --sh1:0 1px 4px rgba(26,95,138,.08);
+  --sh2:0 4px 20px rgba(26,95,138,.11);
+  --sh3:0 12px 48px rgba(26,95,138,.14);
   --r:12px;
   --r2:20px;
 }
@@ -33,386 +36,399 @@
 html{scroll-behavior:smooth;}
 body{background:#fff;color:var(--body);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;}
 
-/* ── CSS ANIMATIONS (no JS-dependent opacity) ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
-@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 @keyframes fadeRight{from{opacity:0;transform:translateX(28px);}to{opacity:1;transform:translateX(0);}}
-@keyframes pulse{0%,100%{opacity:.14;}50%{opacity:.28;}}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
 @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
-/* ── EMERGENCY BAR ── */
-.ebar{background:var(--red);color:#fff;padding:.5rem 1.5rem;text-align:center;display:flex;align-items:center;justify-content:center;gap:.7rem;font-size:.8rem;font-weight:600;position:relative;z-index:1010;}
-.ebar a{color:#fff;text-decoration:none;background:rgba(255,255,255,.18);border-radius:20px;padding:.18rem .85rem;display:inline-flex;align-items:center;gap:.35rem;transition:background .2s;}
-.ebar a:hover{background:rgba(255,255,255,.28);}
-.epulse{width:7px;height:7px;background:#fff;border-radius:50%;display:inline-block;animation:blink 1.4s ease-in-out infinite;}
+/* ── TOPBAR ── */
+.topbar{background:var(--blue);color:#fff;padding:.4rem 3rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;}
+.topbar a{color:rgba(255,255,255,.85);text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;}
+.topbar a:hover{color:#fff;}
+.topbar-left,.topbar-right{display:flex;gap:1.5rem;align-items:center;}
 
 /* ── NAV ── */
-nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:.9rem 4rem;display:flex;justify-content:space-between;align-items:center;box-shadow:var(--sh1);}
-.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none;}
-.nav-mark{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--teal),var(--teal-md));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'DM Serif Display',serif;font-size:1.1rem;box-shadow:0 3px 10px rgba(26,107,107,.3);}
-.nav-name{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--dark);line-height:1;}
-.nav-name span{color:var(--teal-md);}
+nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:.85rem 3rem;display:flex;justify-content:space-between;align-items:center;box-shadow:var(--sh1);}
+.nav-logo{display:flex;align-items:center;gap:.8rem;text-decoration:none;}
+.nav-mark{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--blue-md));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;box-shadow:0 3px 10px rgba(26,95,138,.28);}
+.nav-name{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--dark);line-height:1.1;}
+.nav-name span{color:var(--blue-md);}
 .nav-sub{font-size:.6rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;}
-.nav-links{display:flex;gap:2.2rem;list-style:none;}
-.nav-links a{color:var(--body);font-size:.85rem;font-weight:500;text-decoration:none;letter-spacing:.02em;transition:color .2s;}
-.nav-links a:hover{color:var(--teal);}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:var(--body);font-size:.85rem;font-weight:500;text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--blue);}
+.nav-links .sep-link{color:var(--border);pointer-events:none;}
 .nav-actions{display:flex;gap:.7rem;align-items:center;}
-.btn-ghost-nav{display:inline-flex;align-items:center;gap:.4rem;padding:.58rem 1.1rem;border:1.5px solid var(--border);border-radius:8px;font-size:.82rem;font-weight:500;color:var(--body);text-decoration:none;transition:all .2s;}
-.btn-ghost-nav:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-xs);}
-.btn-primary{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem 1.5rem;background:var(--teal);color:#fff;border-radius:8px;font-size:.85rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:all .25s;box-shadow:0 2px 10px rgba(26,107,107,.25);}
-.btn-primary:hover{background:#135454;transform:translateY(-1px);box-shadow:0 5px 18px rgba(26,107,107,.35);}
+.btn-ghost{display:inline-flex;align-items:center;gap:.4rem;padding:.58rem 1.1rem;border:1.5px solid var(--border);border-radius:8px;font-size:.82rem;font-weight:500;color:var(--body);text-decoration:none;transition:all .2s;}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-xs);}
+.btn-primary{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem 1.4rem;background:var(--blue);color:#fff;border-radius:8px;font-size:.85rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:all .25s;box-shadow:0 2px 10px rgba(26,95,138,.25);}
+.btn-primary:hover{background:#145075;transform:translateY(-1px);box-shadow:0 5px 18px rgba(26,95,138,.35);}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:5px;}
-.hamburger span{width:24px;height:2px;background:var(--dark);border-radius:2px;display:block;transition:all .3s;}
-.mob-menu{position:fixed;inset:0;background:#fff;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;transform:translateX(100%);transition:transform .38s cubic-bezier(.77,0,.18,1);}
+.hamburger span{width:24px;height:2px;background:var(--dark);border-radius:2px;display:block;}
+.mob-menu{position:fixed;inset:0;background:#fff;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;transform:translateX(100%);transition:transform .35s cubic-bezier(.77,0,.18,1);}
 .mob-menu.open{transform:none;}
-.mob-menu a{font-size:1.5rem;font-weight:700;color:var(--dark);text-decoration:none;}
-.mob-menu a:hover{color:var(--teal);}
+.mob-menu a{font-size:1.4rem;font-weight:700;color:var(--dark);text-decoration:none;}
+.mob-menu a:hover{color:var(--blue);}
 .mob-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;font-size:1.4rem;color:var(--muted);cursor:pointer;}
 
 /* ── HERO ── */
-#hero{background:linear-gradient(145deg,#edf6f6 0%,#f6fafa 50%,#fff 100%);padding:5rem 4rem 4.5rem;display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:center;position:relative;overflow:hidden;}
-.hero-glow{position:absolute;top:-140px;right:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(42,144,144,.1) 0%,transparent 70%);pointer-events:none;}
-.hero-glow2{position:absolute;bottom:-100px;left:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(26,107,107,.06) 0%,transparent 70%);pointer-events:none;}
+#hero{background:linear-gradient(145deg,#eef5fb 0%,#f4f8fc 55%,#fff 100%);padding:5rem 3rem 4.5rem;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;position:relative;overflow:hidden;}
+.hero-glow{position:absolute;top:-130px;right:-130px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(42,130,184,.1) 0%,transparent 70%);pointer-events:none;}
+.hero-glow2{position:absolute;bottom:-80px;left:-60px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(26,122,122,.07) 0%,transparent 70%);pointer-events:none;}
+.h-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--blue-lt);border:1px solid rgba(26,95,138,.2);border-radius:20px;padding:.38rem 1rem;font-size:.74rem;font-weight:600;color:var(--blue);margin-bottom:1.5rem;animation:fadeUp .55s ease both;}
+.h-dot{width:6px;height:6px;background:var(--blue-md);border-radius:50%;animation:blink 2s ease infinite;}
+.h-title{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4vw,3.6rem);line-height:1.14;color:var(--dark);margin-bottom:1.2rem;animation:fadeUp .65s .06s ease both;}
+.h-title em{font-style:italic;color:var(--blue-md);}
+.h-desc{font-size:1rem;color:var(--muted);line-height:1.88;max-width:480px;margin-bottom:2rem;animation:fadeUp .65s .12s ease both;}
 
-.h-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--teal-lt);border:1px solid rgba(26,107,107,.25);border-radius:20px;padding:.38rem 1rem;font-size:.74rem;font-weight:600;color:var(--teal);margin-bottom:1.6rem;animation:fadeUp .55s ease both;}
-.h-dot{width:6px;height:6px;background:var(--teal-md);border-radius:50%;animation:blink 2s ease infinite;}
-.h-title{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);line-height:1.12;color:var(--dark);margin-bottom:1.3rem;animation:fadeUp .65s .06s ease both;}
-.h-title em{font-style:italic;color:var(--teal-md);}
-.h-desc{font-size:1rem;color:var(--muted);line-height:1.88;max-width:480px;margin-bottom:2.2rem;animation:fadeUp .65s .12s ease both;}
-.h-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2.8rem;animation:fadeUp .65s .18s ease both;}
-.btn-outline{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem 1.5rem;border:1.5px solid var(--border);border-radius:8px;font-size:.87rem;font-weight:500;color:var(--body);text-decoration:none;transition:all .25s;}
-.btn-outline:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-xs);}
-.h-stats{display:flex;gap:0;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:var(--sh1);animation:fadeUp .65s .25s ease both;}
-.stat{flex:1;padding:1rem 1.1rem;text-align:center;border-right:1px solid var(--border);}
-.stat:last-child{border-right:none;}
-.stat-num{font-family:'DM Serif Display',serif;font-size:1.85rem;color:var(--teal);display:block;line-height:1;}
-.stat-lbl{font-size:.68rem;color:var(--muted);margin-top:.2rem;line-height:1.35;text-transform:uppercase;letter-spacing:.06em;}
+/* Dept pills */
+.h-depts{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:2.2rem;animation:fadeUp .65s .18s ease both;}
+.dept-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1.1rem;border-radius:20px;font-size:.8rem;font-weight:600;text-decoration:none;transition:all .25s;}
+.dp-rose{background:var(--rose-lt);color:var(--rose);border:1.5px solid rgba(155,58,110,.2);}
+.dp-rose:hover{background:var(--rose);color:#fff;}
+.dp-teal{background:var(--teal-lt);color:var(--teal);border:1.5px solid rgba(26,122,122,.2);}
+.dp-teal:hover{background:var(--teal);color:#fff;}
 
-/* Hero right — clinic card */
+.h-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2.5rem;animation:fadeUp .65s .22s ease both;}
+.btn-outline{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem 1.4rem;border:1.5px solid var(--border);border-radius:8px;font-size:.87rem;font-weight:500;color:var(--body);text-decoration:none;transition:all .25s;}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-xs);}
+
+.h-trust{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:var(--r);background:#fff;box-shadow:var(--sh1);overflow:hidden;animation:fadeUp .65s .28s ease both;}
+.trust-item{padding:1rem;text-align:center;border-right:1px solid var(--border);}
+.trust-item:last-child{border-right:none;}
+.trust-num{font-family:'DM Serif Display',serif;font-size:1.75rem;color:var(--blue);display:block;line-height:1;}
+.trust-lbl{font-size:.67rem;color:var(--muted);margin-top:.2rem;line-height:1.35;text-transform:uppercase;letter-spacing:.05em;}
+
+/* Hero right card */
 .hero-right{animation:fadeRight .75s .12s ease both;}
 .hcard{background:#fff;border-radius:var(--r2);border:1px solid var(--border);box-shadow:var(--sh3);overflow:hidden;}
-.hcard-header{background:linear-gradient(145deg,var(--teal-lt),#dbeafe);padding:2.5rem 2rem;display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;position:relative;min-height:230px;justify-content:center;}
-.hcard-icon{width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal-md));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.9rem;box-shadow:0 6px 24px rgba(26,107,107,.3);}
-.hcard-title{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--dark);font-weight:400;}
-.hcard-sub{font-size:.8rem;color:var(--muted);}
-.rating-chip{position:absolute;top:1.1rem;right:1.1rem;background:#fff;border-radius:var(--r);padding:.6rem .9rem;box-shadow:var(--sh2);text-align:center;}
-.rc-stars{color:var(--gold);font-size:.72rem;}
-.rc-score{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--dark);line-height:1;}
-.rc-count{font-size:.62rem;color:var(--muted);}
-.hcard-body{padding:1.4rem 1.8rem;}
-.hcard-row{display:flex;align-items:center;gap:.85rem;padding:.7rem 0;border-bottom:1px solid var(--border);}
+.hcard-header{background:linear-gradient(145deg,var(--blue-lt),#f3e8ff);padding:2.2rem 2rem;display:flex;flex-direction:column;align-items:center;gap:.9rem;text-align:center;position:relative;min-height:200px;justify-content:center;}
+.hcard-icon{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-md));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.7rem;box-shadow:0 5px 20px rgba(26,95,138,.28);}
+.hcard-name{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--dark);}
+.hcard-sub{font-size:.78rem;color:var(--muted);}
+.hcard-body{padding:1.3rem 1.7rem;}
+.hcard-row{display:flex;align-items:center;gap:.8rem;padding:.65rem 0;border-bottom:1px solid var(--border);}
 .hcard-row:last-child{border-bottom:none;}
-.hcr-ic{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;}
+.hcr-ic{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.82rem;flex-shrink:0;}
+.ic-rose{background:var(--rose-lt);color:var(--rose);}
 .ic-teal{background:var(--teal-lt);color:var(--teal);}
-.ic-blue{background:#eff6ff;color:#3b82f6;}
-.ic-gold{background:var(--gold-lt);color:#a07c3a;}
+.ic-blue{background:var(--blue-lt);color:var(--blue);}
 .hcr-label{font-size:.82rem;font-weight:600;color:var(--dark);}
-.hcr-sub{font-size:.71rem;color:var(--muted);}
-.hcr-badge{margin-left:auto;font-size:.68rem;font-weight:700;padding:.18rem .65rem;border-radius:20px;white-space:nowrap;}
-.badge-teal{background:var(--teal-lt);color:var(--teal);}
-.badge-blue{background:#eff6ff;color:#3b82f6;}
-.badge-gold{background:var(--gold-lt);color:#a07c3a;}
+.hcr-sub{font-size:.7rem;color:var(--muted);}
+.hcr-prog{margin-left:auto;font-size:.68rem;font-weight:700;padding:.16rem .6rem;border-radius:20px;white-space:nowrap;}
+.prog-rose{background:var(--rose-lt);color:var(--rose);}
+.prog-teal{background:var(--teal-lt);color:var(--teal);}
 
 /* ── MARQUEE ── */
-.marquee{background:var(--teal);padding:.8rem 0;overflow:hidden;}
-.mtrack{display:flex;gap:2.5rem;animation:marquee 30s linear infinite;width:max-content;}
+.marquee{background:var(--blue);padding:.8rem 0;overflow:hidden;}
+.mtrack{display:flex;gap:2.5rem;animation:marquee 32s linear infinite;width:max-content;}
 .mitem{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;font-weight:600;white-space:nowrap;opacity:.9;}
-.mdot{color:rgba(255,255,255,.38);}
+.mdot{color:rgba(255,255,255,.35);}
 
 /* ── SECTIONS ── */
-.section{padding:5.5rem 4rem;}
+.section{padding:5rem 3rem;}
 .container{max-width:1160px;margin:0 auto;}
-.chip{display:inline-flex;align-items:center;gap:.4rem;background:var(--teal-lt);border:1px solid rgba(26,107,107,.2);border-radius:20px;padding:.3rem .9rem;font-size:.7rem;font-weight:700;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem;}
-.s-title{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,3.5vw,2.7rem);color:var(--dark);line-height:1.2;margin-bottom:.9rem;}
-.s-title em{font-style:italic;color:var(--teal-md);}
+.chip{display:inline-flex;align-items:center;gap:.4rem;border-radius:20px;padding:.3rem .9rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem;}
+.chip-blue{background:var(--blue-lt);border:1px solid rgba(26,95,138,.2);color:var(--blue);}
+.chip-rose{background:var(--rose-lt);border:1px solid rgba(155,58,110,.2);color:var(--rose);}
+.chip-teal{background:var(--teal-lt);border:1px solid rgba(26,122,122,.2);color:var(--teal);}
+.s-title{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,3.2vw,2.6rem);color:var(--dark);line-height:1.2;margin-bottom:.8rem;}
+.s-title em{font-style:italic;color:var(--blue-md);}
 .s-sub{font-size:.95rem;color:var(--muted);line-height:1.85;max-width:520px;}
-.sep{width:44px;height:2px;background:var(--teal);border-radius:2px;margin:.9rem 0 1.4rem;}
+.sep{width:40px;height:2px;background:var(--blue);border-radius:2px;margin:.8rem 0 1.3rem;}
+.sep-rose{background:var(--rose);}
+.sep-teal{background:var(--teal);}
 
-/* Scroll reveal — visible by default, animated when .in added */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease;}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.in{opacity:1;transform:none;}
-.reveal-l{opacity:0;transform:translateX(-26px);transition:opacity .7s ease,transform .7s ease;}
+.reveal-l{opacity:0;transform:translateX(-24px);transition:opacity .65s ease,transform .65s ease;}
 .reveal-l.in{opacity:1;transform:none;}
-.reveal-r{opacity:0;transform:translateX(26px);transition:opacity .7s ease,transform .7s ease;}
+.reveal-r{opacity:0;transform:translateX(24px);transition:opacity .65s ease,transform .65s ease;}
 .reveal-r.in{opacity:1;transform:none;}
+
+/* ── ABOUT (Prezentare generală) ── */
+.about{background:var(--bg2);}
+.about-text p{font-size:.95rem;color:var(--body);line-height:1.9;margin-bottom:1rem;}
+.tech-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem;}
+.tech-item{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.2rem;display:flex;align-items:flex-start;gap:.75rem;box-shadow:var(--sh1);}
+.tech-ic{width:36px;height:36px;border-radius:8px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:.85rem;flex-shrink:0;}
+.tech-label{font-size:.85rem;font-weight:600;color:var(--dark);margin-bottom:.2rem;}
+.tech-desc{font-size:.77rem;color:var(--muted);line-height:1.6;}
+.lab-list{list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-top:1.2rem;}
+.lab-list li{display:flex;align-items:center;gap:.65rem;font-size:.87rem;color:var(--body);padding:.5rem .7rem;background:#fff;border:1px solid var(--border);border-radius:8px;}
+.lab-list li i{color:var(--blue);font-size:.78rem;width:14px;text-align:center;flex-shrink:0;}
+
+/* ── MEDICI ── */
+.medici{background:#fff;}
+.docs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:3rem;}
+.doc-card{border-radius:var(--r2);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh1);transition:all .3s;}
+.doc-card:hover{box-shadow:var(--sh3);transform:translateY(-4px);}
+.doc-photo{height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;position:relative;}
+.dp-rose-bg{background:linear-gradient(145deg,var(--rose-lt),#f3e8ff);}
+.dp-teal-bg{background:linear-gradient(145deg,var(--teal-lt),var(--blue-lt));}
+.doc-av{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:1.8rem;font-style:italic;color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.14);}
+.av-rose{background:linear-gradient(135deg,var(--rose),#c4649b);}
+.av-teal{background:linear-gradient(135deg,var(--teal),#2a9090);}
+.doc-dept-tag{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .8rem;border-radius:20px;}
+.tag-rose{background:var(--rose-lt);color:var(--rose);}
+.tag-teal{background:var(--teal-lt);color:var(--teal);}
+.doc-info{padding:1.6rem 1.8rem;}
+.doc-name{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--dark);margin-bottom:.2rem;}
+.doc-spec-line{font-size:.73rem;font-weight:600;color:var(--blue);margin-bottom:.9rem;letter-spacing:.04em;}
+.doc-bio-section{margin-bottom:.9rem;}
+.doc-bio-title{font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;}
+.comp-list{list-style:none;display:flex;flex-direction:column;gap:.3rem;}
+.comp-list li{font-size:.83rem;color:var(--body);display:flex;align-items:center;gap:.55rem;}
+.comp-list li i{color:var(--blue);font-size:.72rem;width:12px;flex-shrink:0;}
+.membrii-list{display:flex;flex-direction:column;gap:.3rem;}
+.membrii-list span{font-size:.78rem;color:var(--muted);display:flex;align-items:flex-start;gap:.45rem;}
+.membrii-list span i{color:var(--blue-md);flex-shrink:0;margin-top:.2rem;}
+.exp-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem;}
+.exp-chip{background:var(--bg2);border:1px solid var(--border);border-radius:20px;font-size:.73rem;color:var(--body);padding:.22rem .75rem;}
+.doc-prog-box{background:var(--bg2);border-radius:var(--r);padding:.9rem 1rem;margin-top:1rem;border:1px solid var(--border);}
+.doc-prog-title{font-size:.7rem;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;}
+.doc-prog-row{display:flex;justify-content:space-between;font-size:.83rem;padding:.3rem 0;border-bottom:1px solid var(--border);}
+.doc-prog-row:last-child{border-bottom:none;}
+.prog-day{font-weight:500;color:var(--body);}
+.prog-time{font-weight:700;color:var(--blue);}
 
 /* ── SERVICII ── */
 .servicii{background:var(--bg2);}
-.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.5rem;}
-.srv-card{background:#fff;border-radius:var(--r2);padding:2rem;border:1px solid var(--border);box-shadow:var(--sh1);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:all .3s;}
-.srv-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--teal);transform:scaleY(0);transition:transform .3s;transform-origin:bottom;}
-.srv-card:hover::before{transform:scaleY(1);}
-.srv-card:hover{border-color:rgba(26,107,107,.2);box-shadow:var(--sh3);transform:translateY(-3px);}
-.srv-icon-wrap{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.1rem;}
-.si1{background:linear-gradient(135deg,#e8f4f4,#ccf0f0);}
-.si2{background:linear-gradient(135deg,#eff6ff,#dbeafe);}
-.si3{background:linear-gradient(135deg,#f3e8ff,#e9d5ff);}
-.si4{background:linear-gradient(135deg,#f0fdf4,#bbf7d0);}
-.si5{background:linear-gradient(135deg,#fff1f2,#fecdd3);}
-.si6{background:linear-gradient(135deg,#fef9c3,#fef08a);}
-.srv-title{font-family:'DM Serif Display',serif;font-size:1.18rem;color:var(--dark);margin-bottom:.6rem;}
-.srv-desc{font-size:.84rem;color:var(--muted);line-height:1.82;flex:1;margin-bottom:1.3rem;}
-.srv-link{font-size:.78rem;font-weight:600;color:var(--teal);text-decoration:none;display:inline-flex;align-items:center;gap:.3rem;padding:.38rem .85rem;border:1.5px solid var(--teal);border-radius:6px;transition:all .2s;margin-top:auto;width:fit-content;}
-.srv-link:hover{background:var(--teal);color:#fff;}
+.srv-tabs{display:flex;gap:.8rem;margin-bottom:2.5rem;flex-wrap:wrap;}
+.srv-tab{padding:.6rem 1.3rem;border-radius:20px;font-size:.83rem;font-weight:600;cursor:pointer;border:1.5px solid var(--border);color:var(--muted);background:#fff;transition:all .25s;}
+.srv-tab.active-rose{border-color:var(--rose);color:var(--rose);background:var(--rose-xs);}
+.srv-tab.active-teal{border-color:var(--teal);color:var(--teal);background:var(--teal-xs);}
+.srv-content{display:none;}
+.srv-content.active{display:block;}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;}
+.srv-item{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.1rem;display:flex;align-items:center;gap:.7rem;box-shadow:var(--sh1);transition:all .25s;}
+.srv-item:hover{border-color:rgba(26,95,138,.25);box-shadow:var(--sh2);}
+.srv-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.dot-rose{background:var(--rose);}
+.dot-teal{background:var(--teal);}
+.srv-name{font-size:.84rem;color:var(--body);font-weight:500;line-height:1.4;}
 
-/* ── TREATMENTS (De ce să ne alegi) ── */
-.treatments{background:#fff;}
-.treat-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
-.treat-visual{position:relative;}
-.treat-img{aspect-ratio:4/5;background:linear-gradient(145deg,var(--teal-lt),#dbeafe);border-radius:var(--r2);display:flex;align-items:center;justify-content:center;box-shadow:var(--sh2);font-size:5rem;color:var(--teal);opacity:.25;}
-.treat-float{position:absolute;right:-1.5rem;bottom:2.5rem;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 1.5rem;box-shadow:var(--sh3);}
-.tf-num{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--teal);line-height:1;}
-.tf-lbl{font-size:.72rem;color:var(--muted);margin-top:.25rem;letter-spacing:.06em;}
-.treat-list{display:flex;flex-direction:column;gap:1rem;margin-top:2rem;}
-.treat-item{display:flex;gap:1.1rem;padding:1.3rem;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);transition:all .3s;}
-.treat-item:hover{border-color:rgba(26,107,107,.25);background:var(--teal-xs);box-shadow:var(--sh1);}
-.ti-icon{width:44px;height:44px;border-radius:10px;background:var(--teal-lt);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
-.ti-title{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--dark);margin-bottom:.3rem;}
-.ti-desc{font-size:.82rem;color:var(--muted);line-height:1.75;}
-
-/* ── ECHIPĂ ── */
-.team{background:var(--bg2);}
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:3rem;}
-.doc-card{background:#fff;border-radius:var(--r2);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh1);transition:all .3s;}
-.doc-card:hover{border-color:rgba(26,107,107,.25);box-shadow:var(--sh3);transform:translateY(-5px);}
-.doc-photo{aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative;}
-.dp1{background:linear-gradient(145deg,#edf6f6,#cceae9);}
-.dp2{background:linear-gradient(145deg,#eff6ff,#dbeafe);}
-.dp3{background:linear-gradient(145deg,#f3e8ff,#e9d5ff);}
-.doc-initials{font-family:'DM Serif Display',serif;font-size:3.5rem;font-style:italic;}
-.di1{color:rgba(26,107,107,.45);}
-.di2{color:rgba(59,130,246,.4);}
-.di3{color:rgba(124,58,237,.35);}
-.doc-info{padding:1.5rem 1.6rem 1.8rem;}
-.doc-name{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--dark);margin-bottom:.3rem;}
-.doc-spec{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:var(--teal-lt);display:inline-block;padding:.2rem .7rem;border-radius:20px;margin-bottom:.8rem;}
-.doc-bio{font-size:.82rem;color:var(--muted);line-height:1.78;margin-bottom:1rem;}
-.doc-link{font-size:.78rem;color:var(--teal);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:.35rem;transition:gap .2s;}
-.doc-link:hover{gap:.6rem;}
-
-/* ── TESTIMONIALE ── */
-.testimonials{background:#fff;}
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem;}
-.test-card{background:var(--bg2);border-radius:var(--r2);padding:2rem;border:1px solid var(--border);position:relative;transition:box-shadow .3s;}
-.test-card:hover{box-shadow:var(--sh2);}
-.t-stars{position:absolute;top:1.5rem;right:1.5rem;color:var(--gold);font-size:.8rem;letter-spacing:.05em;}
-.tq{font-family:'DM Serif Display',serif;font-style:italic;font-size:.97rem;line-height:1.88;color:var(--body);margin-bottom:1.6rem;padding-left:1rem;position:relative;}
-.tq::before{content:'\201C';position:absolute;left:0;top:-.2rem;font-size:1.9rem;color:var(--teal-lt);line-height:1;}
-.ta{display:flex;align-items:center;gap:.85rem;}
-.ta-av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;color:#fff;font-size:1rem;flex-shrink:0;}
-.av1{background:linear-gradient(135deg,var(--teal),var(--teal-md));}
-.av2{background:linear-gradient(135deg,#3b82f6,#60a5fa);}
-.av3{background:linear-gradient(135deg,#7c3aed,#a78bfa);}
-.ta-name{font-size:.85rem;font-weight:600;color:var(--dark);}
-.ta-treat{font-size:.7rem;color:var(--teal);letter-spacing:.06em;}
-.verified{margin-left:auto;display:flex;align-items:center;gap:.25rem;font-size:.65rem;color:var(--teal);font-weight:600;}
+/* ── NOUTĂȚI ── */
+.noutati{background:#fff;}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.news-card{background:var(--bg2);border-radius:var(--r2);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh1);transition:all .3s;}
+.news-card:hover{box-shadow:var(--sh2);transform:translateY(-3px);}
+.news-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;}
+.ni1{background:linear-gradient(145deg,var(--rose-lt),#f5d0e8);}
+.ni2{background:linear-gradient(145deg,var(--blue-lt),#c7dff5);}
+.ni3{background:linear-gradient(145deg,var(--teal-lt),#b8e8e8);}
+.news-body{padding:1.3rem 1.4rem;}
+.news-date{font-size:.7rem;color:var(--muted);margin-bottom:.5rem;letter-spacing:.06em;}
+.news-title{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--dark);margin-bottom:.6rem;line-height:1.35;}
+.news-desc{font-size:.82rem;color:var(--muted);line-height:1.75;}
 
 /* ── CONTACT ── */
-.contact{background:var(--bg2);}
+.contact-section{background:var(--bg2);}
 .contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:5rem;align-items:start;}
-.contact-info{background:#fff;border-radius:var(--r2);padding:2rem;border:1px solid var(--border);box-shadow:var(--sh1);}
-.ci-head{font-size:.7rem;font-weight:700;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.4rem;}
+.contact-info-box{background:#fff;border-radius:var(--r2);padding:2rem;border:1px solid var(--border);box-shadow:var(--sh1);}
+.ci-head{font-size:.7rem;font-weight:700;color:var(--blue);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.3rem;}
 .ci-row{display:flex;gap:.85rem;align-items:flex-start;padding:.85rem 0;border-bottom:1px solid var(--border);}
 .ci-row:last-of-type{border-bottom:none;}
-.ci-ic{width:38px;height:38px;background:var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;flex-shrink:0;}
+.ci-ic{width:38px;height:38px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;flex-shrink:0;}
 .ci-lbl{font-size:.67rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.12rem;}
-.ci-val{font-size:.9rem;color:var(--dark);font-weight:500;}
-.prog-box{background:var(--teal-xs);border-radius:var(--r);border:1px solid var(--border);padding:1.1rem 1.2rem;margin-top:1.2rem;}
-.prog-head{font-size:.7rem;font-weight:700;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem;}
-.prog-row{display:flex;justify-content:space-between;padding:.38rem 0;font-size:.83rem;border-bottom:1px solid var(--border);}
+.ci-val{font-size:.88rem;color:var(--dark);font-weight:500;}
+.prog-section{margin-top:1.4rem;}
+.prog-section-title{font-size:.7rem;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem;display:flex;align-items:center;gap:.4rem;}
+.prog-dept{margin-bottom:1rem;}
+.prog-dept-name{font-size:.75rem;font-weight:700;padding:.25rem .8rem;border-radius:20px;display:inline-block;margin-bottom:.5rem;}
+.prog-dept-name.rose{background:var(--rose-lt);color:var(--rose);}
+.prog-dept-name.teal{background:var(--teal-lt);color:var(--teal);}
+.prog-row{display:flex;justify-content:space-between;font-size:.83rem;padding:.32rem 0;border-bottom:1px solid var(--border);}
 .prog-row:last-child{border-bottom:none;}
-.prog-day{color:var(--body);font-weight:500;}
-.prog-time{color:var(--teal);font-weight:700;}
-.prog-closed{color:var(--muted);}
+.prog-day-txt{color:var(--body);font-weight:500;}
+.prog-time-txt{color:var(--blue);font-weight:700;}
 .form-box h3{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--dark);margin-bottom:.4rem;}
-.form-box p{font-size:.88rem;color:var(--muted);margin-bottom:1.7rem;line-height:1.75;}
-.form{display:flex;flex-direction:column;gap:1rem;}
+.form-box p{font-size:.88rem;color:var(--muted);margin-bottom:1.6rem;line-height:1.75;}
+.form{display:flex;flex-direction:column;gap:.95rem;}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
 .fg{display:flex;flex-direction:column;gap:.35rem;}
-.fg label{font-size:.73rem;font-weight:600;color:var(--dark);letter-spacing:.02em;}
-.fg .req{color:var(--red);}
-.fg input,.fg select,.fg textarea{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.78rem 1rem;color:var(--dark);font-family:'Inter',sans-serif;font-size:.9rem;outline:none;transition:all .25s;width:100%;}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(26,107,107,.1);}
-.fg input::placeholder,.fg textarea::placeholder{color:#93b3b3;}
-.fg textarea{resize:none;height:100px;}
-.fg select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235a7a7a' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;padding-right:2.2rem;}
+.fg label{font-size:.73rem;font-weight:600;color:var(--dark);}
+.req{color:var(--red);}
+.fg input,.fg select,.fg textarea{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.75rem 1rem;color:var(--dark);font-family:'Inter',sans-serif;font-size:.9rem;outline:none;transition:all .25s;width:100%;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,95,138,.1);}
+.fg input::placeholder,.fg textarea::placeholder{color:#94a8ba;}
+.fg textarea{resize:none;height:95px;}
+.fg select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234a6580' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;padding-right:2.2rem;}
 .gdpr-row{display:flex;align-items:flex-start;gap:.55rem;font-size:.77rem;color:var(--muted);}
-.gdpr-row input[type=checkbox]{width:15px;height:15px;flex-shrink:0;margin-top:2px;accent-color:var(--teal);}
-.gdpr-row a{color:var(--teal);}
-.form-cta{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;}
-.form-note{font-size:.72rem;color:var(--muted);}
+.gdpr-row input{width:15px;height:15px;flex-shrink:0;margin-top:2px;accent-color:var(--blue);}
+.gdpr-row a{color:var(--blue);}
+.form-note{font-size:.72rem;color:var(--muted);text-align:center;margin-top:.3rem;}
 
-/* ── CTA BAND ── */
-.cta-band{background:linear-gradient(135deg,var(--teal) 0%,#0f4040 100%);padding:5rem 4rem;text-align:center;}
-.cta-band h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:#fff;margin-bottom:.9rem;font-weight:400;}
-.cta-band h2 em{font-style:italic;color:rgba(196,169,110,.9);}
-.cta-band p{font-size:1rem;color:rgba(255,255,255,.82);max-width:500px;margin:0 auto 2rem;line-height:1.85;}
+/* ── CTA ── */
+.cta-band{background:linear-gradient(135deg,var(--blue) 0%,#0d3d5e 100%);padding:4.5rem 3rem;text-align:center;}
+.cta-band h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.2vw,2.5rem);color:#fff;margin-bottom:.8rem;font-weight:400;}
+.cta-band h2 em{font-style:italic;color:rgba(255,255,255,.75);}
+.cta-band p{font-size:.97rem;color:rgba(255,255,255,.82);max-width:480px;margin:0 auto 2rem;line-height:1.85;}
 .cta-btns{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;}
-.btn-white{display:inline-flex;align-items:center;gap:.5rem;padding:.82rem 2rem;background:#fff;color:var(--teal);font-size:.9rem;font-weight:700;border-radius:8px;text-decoration:none;transition:all .25s;box-shadow:0 4px 18px rgba(0,0,0,.15);}
-.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.2);}
-.btn-wghost{display:inline-flex;align-items:center;gap:.5rem;padding:.82rem 1.8rem;border:2px solid rgba(255,255,255,.4);color:#fff;font-size:.9rem;font-weight:600;border-radius:8px;text-decoration:none;transition:all .25s;}
+.btn-white{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.9rem;background:#fff;color:var(--blue);font-size:.9rem;font-weight:700;border-radius:8px;text-decoration:none;transition:all .25s;box-shadow:0 4px 16px rgba(0,0,0,.15);}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(0,0,0,.2);}
+.btn-wghost{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.7rem;border:2px solid rgba(255,255,255,.4);color:#fff;font-size:.9rem;font-weight:600;border-radius:8px;text-decoration:none;transition:all .25s;}
 .btn-wghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
-.cta-trust{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;margin-top:2.2rem;}
-.cta-ti{display:flex;align-items:center;gap:.45rem;color:rgba(255,255,255,.78);font-size:.8rem;}
+.cta-trust{display:flex;flex-wrap:wrap;gap:1.8rem;justify-content:center;margin-top:2rem;}
+.cta-ti{display:flex;align-items:center;gap:.4rem;color:rgba(255,255,255,.78);font-size:.8rem;}
+
+/* ── MAP ── */
+.map-section{height:280px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;position:relative;}
+.map-section iframe{width:100%;height:100%;border:0;filter:saturate(.9);}
 
 /* ── FOOTER ── */
-footer{background:var(--dark);padding:3.5rem 4rem 2rem;}
-.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;margin-bottom:2.5rem;}
-.ft-logo{font-family:'DM Serif Display',serif;font-size:1.5rem;color:#fff;margin-bottom:.5rem;}
-.ft-logo span{color:var(--teal-md);}
-.ft-desc{font-size:.8rem;color:#4a7070;line-height:1.8;max-width:240px;margin-bottom:1.1rem;}
-.ft-socials{display:flex;gap:.7rem;}
-.ft-socials a{width:34px;height:34px;border:1px solid #1a3a3a;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#4a7070;font-size:.85rem;transition:all .2s;}
-.ft-socials a:hover{border-color:var(--teal-md);color:var(--teal-md);}
-.ft-col h4{font-size:.7rem;font-weight:700;color:#4a7070;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem;}
-.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
-.ft-col ul a{font-size:.82rem;color:#3a6060;text-decoration:none;transition:color .2s;}
-.ft-col ul a:hover{color:var(--teal-md);}
-.ft-bottom{border-top:1px solid #1a3a3a;padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;}
-.ft-copy{font-size:.72rem;color:#2a5050;}
-.ft-brady{font-size:.68rem;color:#2a5050;}
-.ft-brady a{color:var(--teal-md);text-decoration:none;}
+footer{background:var(--dark);padding:3rem 3rem 1.8rem;}
+.ft-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:4rem;margin-bottom:2rem;}
+.ft-logo{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#fff;margin-bottom:.4rem;}
+.ft-logo span{color:#60a5fa;}
+.ft-desc{font-size:.8rem;color:#4a6a7a;line-height:1.8;max-width:240px;margin-bottom:1rem;}
+.ft-socials{display:flex;gap:.6rem;}
+.ft-socials a{width:32px;height:32px;border:1px solid #1a3a4a;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#4a6a7a;font-size:.82rem;transition:all .2s;}
+.ft-socials a:hover{border-color:#60a5fa;color:#60a5fa;}
+.ft-col h4{font-size:.68rem;font-weight:700;color:#4a6a7a;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.9rem;}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+.ft-col ul a{font-size:.8rem;color:#3a5a6a;text-decoration:none;transition:color .2s;}
+.ft-col ul a:hover{color:#60a5fa;}
+.ft-bottom{border-top:1px solid #1a3a4a;padding-top:1.3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem;}
+.ft-copy{font-size:.7rem;color:#2a4a5a;}
+.ft-brady{font-size:.67rem;color:#2a4a5a;}
+.ft-brady a{color:#60a5fa;text-decoration:none;}
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .srv-grid{grid-template-columns:repeat(2,1fr);}
-  .team-grid{grid-template-columns:repeat(2,1fr);}
-  .test-grid{grid-template-columns:repeat(2,1fr);}
 }
 @media(max-width:768px){
-  nav{padding:.8rem 1.5rem;}
+  .topbar{display:none;}
+  nav{padding:.8rem 1.2rem;}
   .nav-links,.nav-actions{display:none;}
   .hamburger{display:flex;}
   #hero{grid-template-columns:1fr;padding:3.5rem 1.5rem 3rem;gap:2.5rem;}
   .hero-right{display:none;}
   .section{padding:3.5rem 1.5rem;}
-  .treat-grid,.contact-grid{grid-template-columns:1fr;}
-  .srv-grid,.team-grid,.test-grid{grid-template-columns:1fr;}
+  .about-grid,.contact-grid{grid-template-columns:1fr;}
+  .docs-grid{grid-template-columns:1fr;}
+  .srv-grid{grid-template-columns:1fr 1fr;}
+  .news-grid{grid-template-columns:1fr;}
   .ft-grid{grid-template-columns:1fr;}
   .ft-bottom{flex-direction:column;text-align:center;}
   .frow{grid-template-columns:1fr;}
-  .h-stats{grid-template-columns:repeat(2,1fr);display:grid;}
-  .stat{border-right:none;border-bottom:1px solid var(--border);}
-  .stat:nth-child(odd){border-right:1px solid var(--border);}
-  .stat:nth-last-child(-n+2){border-bottom:none;}
-  .cta-band{padding:3.5rem 1.5rem;}
-  nav{padding:.8rem 1.2rem;}
-  .cta-band,.ebar{padding-left:1rem;padding-right:1rem;}
+  .h-trust{grid-template-columns:1fr 1fr 1fr;}
+  .tech-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .srv-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
-<!-- Emergency bar -->
-<div class="ebar">
-  <span class="epulse"></span>
-  <span>Urgențe stomatologice — Tratate prioritar</span>
-  <a href="tel:0269000000"><i class="fa fa-phone"></i>0269 xxx xxx</a>
+<!-- Topbar -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="tel:+40747011770"><i class="fa fa-phone"></i>+40 747 011 770</a>
+    <a href="mailto:drcostinmedica@gmail.com"><i class="fa fa-envelope"></i>drcostinmedica@gmail.com</a>
+  </div>
+  <div class="topbar-right">
+    <a href="https://www.facebook.com/drcostinmedica" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+    <span style="color:rgba(255,255,255,.4)">|</span>
+    <span><i class="fa fa-map-marker-alt"></i> Baia Mare, str. Victor Babeș nr. 22E</span>
+  </div>
 </div>
 
 <!-- Nav -->
 <nav>
   <a href="#" class="nav-logo">
-    <div class="nav-mark">D</div>
+    <div class="nav-mark"><i class="fa fa-stethoscope"></i></div>
     <div>
-      <div class="nav-name">Dent<span>Elite</span></div>
-      <div class="nav-sub">Clinică Stomatologică · Sibiu</div>
+      <div class="nav-name">Dr Costin <span>Medica</span></div>
+      <div class="nav-sub">Cabinet Medical · Baia Mare</div>
     </div>
   </a>
   <ul class="nav-links">
+    <li><a href="#despre">Despre</a></li>
+    <li><a href="#medici">Medici</a></li>
     <li><a href="#servicii">Servicii</a></li>
-    <li><a href="#tratamente">Tratamente</a></li>
-    <li><a href="#echipa">Echipă</a></li>
-    <li><a href="#testimoniale">Recenzii</a></li>
+    <li><a href="#noutati">Noutăți</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-actions">
-    <a href="tel:0269000000" class="btn-ghost-nav"><i class="fa fa-phone"></i>Sună acum</a>
+    <a href="tel:+40747011770" class="btn-ghost"><i class="fa fa-phone"></i>0747 011 770</a>
     <a href="#contact" class="btn-primary"><i class="fa fa-calendar-check"></i>Programare</a>
   </div>
   <button class="hamburger" id="hbg"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- Mobile menu -->
 <div class="mob-menu" id="mobmenu">
   <button class="mob-close" id="mobclose"><i class="fa fa-times"></i></button>
+  <a href="#despre" onclick="closeMob()">Despre</a>
+  <a href="#medici" onclick="closeMob()">Medici</a>
   <a href="#servicii" onclick="closeMob()">Servicii</a>
-  <a href="#tratamente" onclick="closeMob()">Tratamente</a>
-  <a href="#echipa" onclick="closeMob()">Echipă</a>
-  <a href="#testimoniale" onclick="closeMob()">Recenzii</a>
+  <a href="#noutati" onclick="closeMob()">Noutăți</a>
   <a href="#contact" onclick="closeMob()">Contact</a>
-  <a href="#contact" onclick="closeMob()" class="btn-primary" style="margin-top:.5rem"><i class="fa fa-calendar-check"></i>Fă o programare</a>
+  <a href="#contact" onclick="closeMob()" class="btn-primary" style="margin-top:.5rem"><i class="fa fa-calendar-check"></i>Programare</a>
 </div>
 
 <!-- ═══ HERO ═══ -->
 <section id="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
+  <div class="hero-glow"></div><div class="hero-glow2"></div>
   <div>
-    <div class="h-badge"><span class="h-dot"></span>Clinică stomatologică premium — Sibiu</div>
-    <h1 class="h-title">Zâmbetul tău<br><em>perfect</em><br>începe aici</h1>
-    <p class="h-desc">DentElite oferă tratamente stomatologice de ultimă generație într-un mediu premium, cu medici specializați și echipamente de vârf. Îngrijim sănătatea și estetica zâmbetului tău.</p>
+    <div class="h-badge"><span class="h-dot"></span>Cabinet medical privat — Baia Mare</div>
+    <h1 class="h-title">Îngrijire medicală<br><em>specializată</em><br>pentru familia ta</h1>
+    <p class="h-desc">Oferim servicii medicale de înaltă calitate cu aparatură de ultimă generație și echipamente conform standardelor europene, integrate într-un spațiu modern și prietenos.</p>
+    <div class="h-depts">
+      <a href="#ginecologie" class="dept-pill dp-rose"><i class="fa fa-venus"></i>Obstetrică · Ginecologie</a>
+      <a href="#pediatrie" class="dept-pill dp-teal"><i class="fa fa-child"></i>Pediatrie · Endocrinologie</a>
+    </div>
     <div class="h-btns">
       <a href="#contact" class="btn-primary"><i class="fa fa-calendar-check"></i>Fă o programare</a>
-      <a href="#servicii" class="btn-outline"><i class="fa fa-list-check"></i>Serviciile noastre</a>
+      <a href="#servicii" class="btn-outline"><i class="fa fa-list-check"></i>Servicii medicale</a>
     </div>
-    <div class="h-stats">
-      <div class="stat">
-        <span class="stat-num">8000+</span>
-        <div class="stat-lbl">Pacienți<br>tratați</div>
+    <div class="h-trust">
+      <div class="trust-item">
+        <span class="trust-num">13+</span>
+        <div class="trust-lbl">Ani ecografie<br>morfologică</div>
       </div>
-      <div class="stat">
-        <span class="stat-num">12+</span>
-        <div class="stat-lbl">Ani de<br>experiență</div>
+      <div class="trust-item">
+        <span class="trust-num">2</span>
+        <div class="trust-lbl">Specialități<br>medicale</div>
       </div>
-      <div class="stat">
-        <span class="stat-num">6</span>
-        <div class="stat-lbl">Medici<br>specialiști</div>
-      </div>
-      <div class="stat">
-        <span class="stat-num">98%</span>
-        <div class="stat-lbl">Succes<br>implanturi</div>
+      <div class="trust-item">
+        <span class="trust-num">3D/4D</span>
+        <div class="trust-lbl">Ecograf Samsung<br>certificat 2018</div>
       </div>
     </div>
   </div>
-
   <div class="hero-right">
     <div class="hcard">
       <div class="hcard-header">
-        <div class="hcard-icon"><i class="fa fa-tooth"></i></div>
-        <div class="hcard-title">DentElite Sibiu</div>
-        <div class="hcard-sub">Str. Dorobanților 28 · Sibiu</div>
-        <div class="rating-chip">
-          <div class="rc-stars">★★★★★</div>
-          <div class="rc-score">5.0</div>
-          <div class="rc-count">Recenzii Google</div>
-        </div>
+        <div class="hcard-icon"><i class="fa fa-stethoscope"></i></div>
+        <div class="hcard-name">Dr Costin Medica</div>
+        <div class="hcard-sub">str. Victor Babeș nr. 22E · Baia Mare</div>
       </div>
       <div class="hcard-body">
         <div class="hcard-row">
-          <div class="hcr-ic ic-teal"><i class="fa fa-shield-halved"></i></div>
+          <div class="hcr-ic ic-rose"><i class="fa fa-venus"></i></div>
           <div>
-            <div class="hcr-label">Garanție Tratamente</div>
-            <div class="hcr-sub">Implanturi · Fațete · Coroane</div>
+            <div class="hcr-label">Obstetrică · Ginecologie</div>
+            <div class="hcr-sub">Dr. Bogdan Costin · Medic primar</div>
           </div>
-          <span class="hcr-badge badge-teal">Garantat</span>
+          <span class="hcr-prog prog-rose">Lu, Mi 15–19</span>
         </div>
         <div class="hcard-row">
-          <div class="hcr-ic ic-blue"><i class="fa fa-x-ray"></i></div>
+          <div class="hcr-ic ic-teal"><i class="fa fa-child"></i></div>
           <div>
-            <div class="hcr-label">Radiografie Digitală 3D</div>
-            <div class="hcr-sub">CBCT · Planificare preoperatorie</div>
+            <div class="hcr-label">Pediatrie · Endocrinologie</div>
+            <div class="hcr-sub">Dr. Octavia Costin · Medic specialist</div>
           </div>
-          <span class="hcr-badge badge-blue">Inclus</span>
+          <span class="hcr-prog prog-teal">Ma, Jo 15–19</span>
         </div>
         <div class="hcard-row">
-          <div class="hcr-ic ic-gold"><i class="fa fa-user-doctor"></i></div>
+          <div class="hcr-ic ic-blue"><i class="fa fa-microscope"></i></div>
           <div>
-            <div class="hcr-label">Specialiști cu formare internațională</div>
-            <div class="hcr-sub">Vienna · München · București</div>
+            <div class="hcr-label">Ecograf Samsung 3D/4D</div>
+            <div class="hcr-sub">Tehnologie inovativă certificată 2018</div>
           </div>
-          <span class="hcr-badge badge-gold">6 medici</span>
         </div>
       </div>
     </div>
@@ -422,209 +438,259 @@ footer{background:var(--dark);padding:3.5rem 4rem 2rem;}
 <!-- Marquee -->
 <div class="marquee">
   <div class="mtrack">
-    <span class="mitem">Estetică Dentară</span><span class="mdot">●</span>
-    <span class="mitem">Implantologie Premium</span><span class="mdot">●</span>
-    <span class="mitem">Ortodonție & Invisalign</span><span class="mdot">●</span>
-    <span class="mitem">Profilaxie & Igienizare</span><span class="mdot">●</span>
-    <span class="mitem">Chirurgie Orală</span><span class="mdot">●</span>
-    <span class="mitem">Stomatologie Pediatrică</span><span class="mdot">●</span>
-    <span class="mitem">Radiografie 3D CBCT</span><span class="mdot">●</span>
-    <span class="mitem">Design Digital Zâmbet</span><span class="mdot">●</span>
-    <span class="mitem">Estetică Dentară</span><span class="mdot">●</span>
-    <span class="mitem">Implantologie Premium</span><span class="mdot">●</span>
-    <span class="mitem">Ortodonție & Invisalign</span><span class="mdot">●</span>
-    <span class="mitem">Profilaxie & Igienizare</span><span class="mdot">●</span>
-    <span class="mitem">Chirurgie Orală</span><span class="mdot">●</span>
-    <span class="mitem">Stomatologie Pediatrică</span><span class="mdot">●</span>
-    <span class="mitem">Radiografie 3D CBCT</span><span class="mdot">●</span>
-    <span class="mitem">Design Digital Zâmbet</span><span class="mdot">●</span>
+    <span class="mitem">Obstetrică · Ginecologie</span><span class="mdot">●</span>
+    <span class="mitem">Pediatrie · Endocrinologie</span><span class="mdot">●</span>
+    <span class="mitem">Ecografie 3D/4D Samsung</span><span class="mdot">●</span>
+    <span class="mitem">Amniocenteză</span><span class="mdot">●</span>
+    <span class="mitem">Test NIPT · Panorama · Harmony</span><span class="mdot">●</span>
+    <span class="mitem">Colposcopie</span><span class="mdot">●</span>
+    <span class="mitem">Chirurgie Laparoscopică</span><span class="mdot">●</span>
+    <span class="mitem">Monitorizare Fetală CTG</span><span class="mdot">●</span>
+    <span class="mitem">Obstetrică · Ginecologie</span><span class="mdot">●</span>
+    <span class="mitem">Pediatrie · Endocrinologie</span><span class="mdot">●</span>
+    <span class="mitem">Ecografie 3D/4D Samsung</span><span class="mdot">●</span>
+    <span class="mitem">Amniocenteză</span><span class="mdot">●</span>
+    <span class="mitem">Test NIPT · Panorama · Harmony</span><span class="mdot">●</span>
+    <span class="mitem">Colposcopie</span><span class="mdot">●</span>
+    <span class="mitem">Chirurgie Laparoscopică</span><span class="mdot">●</span>
+    <span class="mitem">Monitorizare Fetală CTG</span><span class="mdot">●</span>
   </div>
 </div>
+
+<!-- ═══ DESPRE (Prezentare generală) ═══ -->
+<section class="section about" id="despre">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto 3.5rem;">
+      <div class="chip chip-blue" style="margin-bottom:.8rem;">Prezentare generală</div>
+      <h2 class="s-title">Cabinet modern cu <em>aparatură de vârf</em></h2>
+      <div class="sep" style="margin:.8rem auto 1rem;"></div>
+      <p class="s-sub" style="margin:0 auto;">Deschiderea cabinetului reprezintă realizarea unui vis de a putea oferi servicii medicale de înaltă calitate, cu aparatură de ultimă generație și echipamente conform standardelor europene.</p>
+    </div>
+    <div class="tech-grid reveal" style="max-width:900px;margin:0 auto 2rem;">
+      <div class="tech-item">
+        <div class="tech-ic"><i class="fa fa-ultrasound"></i></div>
+        <div>
+          <div class="tech-label">Ecograf Samsung 3D/4D</div>
+          <div class="tech-desc">Certificat tehnologie inovativă 2018. Ecografii transabdominale, endovaginale și morfologice de înaltă rezoluție.</div>
+        </div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-ic"><i class="fa fa-heart-pulse"></i></div>
+        <div>
+          <div class="tech-label">Monitor Fetal (CTG)</div>
+          <div class="tech-desc">Cardiotocograf pentru monitorizarea bătăilor inimii fătului. Apreciere superioară a stării de bine a fătului în uter.</div>
+        </div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-ic"><i class="fa fa-shield-halved"></i></div>
+        <div>
+          <div class="tech-label">Sterilizare Standarde UE</div>
+          <div class="tech-desc">Autoclav Clasa B, sigilare individuală a fiecărui instrument, valve de unică folosință. Protocoale europene respectate.</div>
+        </div>
+      </div>
+      <div class="tech-item">
+        <div class="tech-ic"><i class="fa fa-dna"></i></div>
+        <div>
+          <div class="tech-label">Teste Genetice & Laborator</div>
+          <div class="tech-desc">Colaborare cu laboratoare de genetică pentru NIPT (Panorama/Harmony), ADN fetal, cariotip, trombofilie.</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="max-width:900px;margin:0 auto;">
+      <p style="font-size:.82rem;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem;">Probe de laborator recoltate în cabinet:</p>
+      <ul class="lab-list" style="display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;">
+        <li><i class="fa fa-check-circle"></i>Test Chlamydia / Mycoplasma</li>
+        <li><i class="fa fa-check-circle"></i>Test HPV (papiloma virus uman)</li>
+        <li><i class="fa fa-check-circle"></i>Test Papanicolau mediu lichid</li>
+        <li><i class="fa fa-check-circle"></i>NIPT / Test Panorama / Harmony</li>
+        <li><i class="fa fa-check-circle"></i>ADN fetal din sângele matern</li>
+        <li><i class="fa fa-check-circle"></i>Teste trombofilie</li>
+        <li><i class="fa fa-check-circle"></i>Cariotip fetal (amniocenteză)</li>
+        <li><i class="fa fa-check-circle"></i>Teste boli transmitere sexuală</li>
+        <li><i class="fa fa-check-circle"></i>Teste genetice forme de cancer</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MEDICI ═══ -->
+<section class="section medici" id="medici">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:520px;margin:0 auto 0;">
+      <div class="chip chip-blue" style="margin-bottom:.8rem;">Specialiștii noștri</div>
+      <h2 class="s-title">Echipa medicală</h2>
+      <div class="sep" style="margin:.8rem auto;"></div>
+    </div>
+    <div class="docs-grid">
+      <!-- Dr. Bogdan Costin -->
+      <div class="doc-card reveal" id="ginecologie">
+        <div class="doc-photo dp-rose-bg">
+          <div class="doc-av av-rose">BC</div>
+          <span class="doc-dept-tag tag-rose">Obstetrică · Ginecologie</span>
+        </div>
+        <div class="doc-info">
+          <div class="doc-name">Dr. Bogdan Costin</div>
+          <div class="doc-spec-line">Medic primar obstetrică-ginecologie · Supraspecializare medicină materno-fetală</div>
+          <div class="doc-bio-section">
+            <div class="doc-bio-title">Competențe</div>
+            <ul class="comp-list">
+              <li><i class="fa fa-circle-dot"></i>Ecografie materno-fetală</li>
+              <li><i class="fa fa-circle-dot"></i>Colposcopie</li>
+              <li><i class="fa fa-circle-dot"></i>Chirurgie laparoscopică ginecologică</li>
+            </ul>
+          </div>
+          <div class="doc-bio-section">
+            <div class="doc-bio-title">Experiență</div>
+            <div class="exp-row">
+              <span class="exp-chip"><i class="fa fa-clock" style="color:var(--blue);margin-right:.3rem"></i>13+ ani ecografie morfologică fetală</span>
+              <span class="exp-chip"><i class="fa fa-clock" style="color:var(--blue);margin-right:.3rem"></i>7+ ani chirurgie laparoscopică</span>
+              <span class="exp-chip"><i class="fa fa-circle-check" style="color:var(--blue);margin-right:.3rem"></i>Amniocenteză din 2018</span>
+            </div>
+          </div>
+          <div class="doc-bio-section">
+            <div class="doc-bio-title">Membru în</div>
+            <div class="membrii-list">
+              <span><i class="fa fa-circle-dot" style="color:var(--rose);margin-top:2px;font-size:.6rem"></i>Societatea Română de Obstetrică-Ginecologie</span>
+              <span><i class="fa fa-circle-dot" style="color:var(--rose);margin-top:2px;font-size:.6rem"></i>Societatea Română de Ultrasonografie în OG</span>
+              <span><i class="fa fa-circle-dot" style="color:var(--rose);margin-top:2px;font-size:.6rem"></i>Societatea Internațională de Ultrasonografie în OG</span>
+            </div>
+          </div>
+          <div class="doc-prog-box">
+            <div class="doc-prog-title"><i class="fa fa-clock"></i>Program consultatii</div>
+            <div class="doc-prog-row"><span class="prog-day">Luni</span><span class="prog-time">15:00 – 19:00</span></div>
+            <div class="doc-prog-row"><span class="prog-day">Miercuri</span><span class="prog-time">15:00 – 19:00</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Dr. Octavia Costin -->
+      <div class="doc-card reveal" id="pediatrie">
+        <div class="doc-photo dp-teal-bg">
+          <div class="doc-av av-teal">OC</div>
+          <span class="doc-dept-tag tag-teal">Pediatrie · Endocrinologie</span>
+        </div>
+        <div class="doc-info">
+          <div class="doc-name">Dr. Octavia Costin</div>
+          <div class="doc-spec-line">Medic specialist pediatrie · Medic specialist endocrinologie · Doctor în științe medicale</div>
+          <div class="doc-bio-section">
+            <div class="doc-bio-title">Competențe & Studii</div>
+            <ul class="comp-list">
+              <li><i class="fa fa-circle-dot"></i>Competență în ecografie</li>
+              <li><i class="fa fa-circle-dot"></i>Studii complementare de nutriție pediatrică</li>
+              <li><i class="fa fa-circle-dot"></i>Doctor în științe medicale</li>
+            </ul>
+          </div>
+          <div class="doc-bio-section">
+            <div class="doc-bio-title">Specializări</div>
+            <div class="exp-row">
+              <span class="exp-chip">Pediatrie generală</span>
+              <span class="exp-chip">Endocrinologie pediatrică</span>
+              <span class="exp-chip">Nutriție pediatrică</span>
+              <span class="exp-chip">Ecografie pediatrică</span>
+            </div>
+          </div>
+          <div class="doc-prog-box" style="border-color:rgba(26,122,122,.2);">
+            <div class="doc-prog-title" style="color:var(--teal);"><i class="fa fa-clock"></i>Program consultatii</div>
+            <div class="doc-prog-row"><span class="prog-day">Marți</span><span class="prog-time" style="color:var(--teal);">15:00 – 19:00</span></div>
+            <div class="doc-prog-row"><span class="prog-day">Joi</span><span class="prog-time" style="color:var(--teal);">15:00 – 19:00</span></div>
+          </div>
+          <div style="margin-top:1.2rem;background:var(--teal-xs);border-radius:var(--r);padding:1rem;border:1px solid rgba(26,122,122,.15);">
+            <p style="font-size:.82rem;color:var(--muted);line-height:1.75;">Colaborare cu clinici de Fertilizare in Vitro (București, Sibiu, Târgu-Mureș). Servicii de asistență a reproducerii.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ SERVICII ═══ -->
 <section class="section servicii" id="servicii">
   <div class="container">
-    <div class="reveal" style="text-align:center;max-width:580px;margin:0 auto 0;">
-      <div class="chip" style="display:block;text-align:center;margin-bottom:.8rem;"><span>Ce facem</span></div>
-      <h2 class="s-title">Servicii stomatologice <em>complete</em></h2>
-      <div class="sep" style="margin:.9rem auto;"></div>
-      <p class="s-sub" style="margin:0 auto;">De la controale de rutină la transformări estetice complete, clinica noastră acoperă toate nevoile stomatologice.</p>
+    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 2rem;">
+      <div class="chip chip-blue" style="margin-bottom:.8rem;">Servicii medicale</div>
+      <h2 class="s-title">Ce oferim</h2>
+      <div class="sep" style="margin:.8rem auto;"></div>
     </div>
-    <div class="srv-grid">
-      <div class="srv-card reveal">
-        <div class="srv-icon-wrap si1">✨</div>
-        <div class="srv-title">Estetică Dentară</div>
-        <p class="srv-desc">Fațete dentare, albire profesională, coroane ceramice și restaurări estetice pentru un zâmbet impecabil.</p>
-        <a href="#contact" class="srv-link">Programare <i class="fa fa-arrow-right"></i></a>
-      </div>
-      <div class="srv-card reveal">
-        <div class="srv-icon-wrap si2">🔩</div>
-        <div class="srv-title">Implantologie</div>
-        <p class="srv-desc">Implanturi dentare de titan cu rată de succes 98%. Restaurăm dinții lipsă cu soluții durabile și estetice.</p>
-        <a href="#contact" class="srv-link">Programare <i class="fa fa-arrow-right"></i></a>
-      </div>
-      <div class="srv-card reveal">
-        <div class="srv-icon-wrap si3">😬</div>
-        <div class="srv-title">Ortodonție</div>
-        <p class="srv-desc">Aparate dentare metalice, ceramice și invizibile (Invisalign) pentru dinți aliniați perfect, la orice vârstă.</p>
-        <a href="#contact" class="srv-link">Programare <i class="fa fa-arrow-right"></i></a>
-      </div>
-      <div class="srv-card reveal">
-        <div class="srv-icon-wrap si4">🛡️</div>
-        <div class="srv-title">Profilaxie &amp; Igienizare</div>
-        <p class="srv-desc">Detartraj, airflow, sigilări și consultații preventive pentru menținerea sănătății orale pe termen lung.</p>
-        <a href="#contact" class="srv-link">Programare <i class="fa fa-arrow-right"></i></a>
-      </div>
-      <div class="srv-card reveal">
-        <div class="srv-icon-wrap si5">🦷</div>
-        <div class="srv-title">Chirurgie Orală</div>
-        <p class="srv-desc">Extracții, chirurgie parodontală și rezecții apicale realizate cu precizie și confort maxim pentru pacient.</p>
-        <a href="#contact" class="srv-link">Programare <i class="fa fa-arrow-right"></i></a>
-      </div>
-      <div class="srv-card reveal">
-        <div class="srv-icon-wrap si6">👶</div>
-        <div class="srv-title">Stomatologie Pediatrică</div>
-        <p class="srv-desc">Tratamente prietenoase pentru copii, într-un mediu relaxant. Construim o relație pozitivă cu dentistul de la vârste mici.</p>
-        <a href="#contact" class="srv-link">Programare <i class="fa fa-arrow-right"></i></a>
+    <div class="srv-tabs reveal">
+      <button class="srv-tab active-rose" onclick="showTab('gine',this,'rose')"><i class="fa fa-venus"></i> Obstetrică · Ginecologie</button>
+      <button class="srv-tab" onclick="showTab('ped',this,'teal')"><i class="fa fa-child"></i> Pediatrie · Endocrinologie</button>
+    </div>
+    <div class="srv-content active" id="tab-gine">
+      <div class="srv-grid reveal">
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Consultație gravidă (include ecografia)</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Ecografie morfologică fetală</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Ecografie morfologică fetală + 4D</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Monitorizare fetală (cardiotocografie)</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Dublu test / Triplu test</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Amniocenteză (nu include analiza de laborator)</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Test genetic (ADN fetal din sângele matern)</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">A doua opinie (atitudine terapeutică)</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Consultație (include ecografie)</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Consultație + ecografie + test Papanicolau</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Consultație + ecografie + ex. sân</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Consult + test Papanicolau</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Ecografie ginecologică</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Consultație de control</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Montare sterilet (include ecografie)</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Colposcopie</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Extragere sterilet (include ecografie)</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Cauterizări, electrorezecții</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Biopsie (include ex. histopatologic)</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Histerosalpingosonografie</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Avort medicamentos (include ecografie control)</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Examen secreție vaginală</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Antibiogramă col</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Test Chlamydia / Mycoplasma</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Test boli cu transmitere sexuală</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Test HPV</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Test Papanicolau / mediu lichid</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Teste pentru trombofilie</span></div>
+        <div class="srv-item"><span class="srv-dot dot-rose"></span><span class="srv-name">Cariotip fetal (amniocenteză / făt mort)</span></div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ═══ TRATAMENTE / DE CE SĂ NE ALEGI ═══ -->
-<section class="section treatments" id="tratamente">
-  <div class="container">
-    <div class="treat-grid">
-      <div class="treat-visual reveal-l">
-        <div class="treat-img"><i class="fa fa-tooth"></i></div>
-        <div class="treat-float">
-          <div class="tf-num">98%</div>
-          <div class="tf-lbl">Rata de succes<br>implanturi</div>
-        </div>
-      </div>
-      <div class="reveal-r">
-        <div class="chip">De ce să ne alegi</div>
-        <h2 class="s-title">Tehnologie <em>de vârf</em></h2>
-        <div class="sep"></div>
-        <p class="s-sub">DentElite investește constant în cele mai moderne echipamente și tehnici stomatologice pentru a oferi tratamente mai precise, mai rapide și mai confortabile.</p>
-        <div class="treat-list">
-          <div class="treat-item">
-            <div class="ti-icon"><i class="fa fa-x-ray" style="color:var(--teal);"></i></div>
-            <div>
-              <div class="ti-title">Radiografie Digitală 3D (CBCT)</div>
-              <div class="ti-desc">Imagistică 3D precisă pentru diagnosticarea corectă și planificarea tratamentelor complexe.</div>
-            </div>
-          </div>
-          <div class="treat-item">
-            <div class="ti-icon"><i class="fa fa-laptop-medical" style="color:var(--teal);"></i></div>
-            <div>
-              <div class="ti-title">Design Digital al Zâmbetului</div>
-              <div class="ti-desc">Vizualizezi rezultatul final înainte de tratament prin simulare digitală avansată.</div>
-            </div>
-          </div>
-          <div class="treat-item">
-            <div class="ti-icon"><i class="fa fa-heart-pulse" style="color:var(--teal);"></i></div>
-            <div>
-              <div class="ti-title">Sedare Conștientă</div>
-              <div class="ti-desc">Tratamente fără stres și durere pentru pacienții anxioși, cu monitorizare continuă.</div>
-            </div>
-          </div>
-        </div>
+    <div class="srv-content" id="tab-ped">
+      <div class="srv-grid reveal">
+        <div class="srv-item"><span class="srv-dot dot-teal"></span><span class="srv-name">Consultație pediatrică generală</span></div>
+        <div class="srv-item"><span class="srv-dot dot-teal"></span><span class="srv-name">Consultație endocrinologie pediatrică</span></div>
+        <div class="srv-item"><span class="srv-dot dot-teal"></span><span class="srv-name">Ecografie pediatrică</span></div>
+        <div class="srv-item"><span class="srv-dot dot-teal"></span><span class="srv-name">Evaluare nutriție pediatrică</span></div>
+        <div class="srv-item"><span class="srv-dot dot-teal"></span><span class="srv-name">Consultație de control</span></div>
+        <div class="srv-item"><span class="srv-dot dot-teal"></span><span class="srv-name">Endocrinologie pediatrică</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ ECHIPĂ ═══ -->
-<section class="section team" id="echipa">
+<!-- ═══ NOUTĂȚI ═══ -->
+<section class="section noutati" id="noutati">
   <div class="container">
-    <div class="reveal" style="text-align:center;max-width:540px;margin:0 auto;">
-      <div class="chip" style="display:block;text-align:center;margin-bottom:.8rem;">Specialiștii noștri</div>
-      <h2 class="s-title">Echipa DentElite</h2>
-      <div class="sep" style="margin:.9rem auto;"></div>
-      <p class="s-sub" style="margin:0 auto;">Medici cu formare internațională și pasionați de excelență stomatologică.</p>
+    <div class="reveal" style="text-align:center;max-width:520px;margin:0 auto 0;">
+      <div class="chip chip-blue" style="margin-bottom:.8rem;">Noutăți</div>
+      <h2 class="s-title">Informații medicale</h2>
+      <div class="sep" style="margin:.8rem auto;"></div>
     </div>
-    <div class="team-grid">
-      <div class="doc-card reveal">
-        <div class="doc-photo dp1">
-          <div class="doc-initials di1">DR</div>
-        </div>
-        <div class="doc-info">
-          <div class="doc-name">Dr. Raluca Ionescu</div>
-          <div class="doc-spec">Estetică Dentară &amp; Implantologie</div>
-          <p class="doc-bio">Medic primar stomatolog cu formare la Vienna Dental School. Specializată în transformări estetice complete și implanturi imediate.</p>
-          <a href="#contact" class="doc-link">Programare <i class="fa fa-arrow-right"></i></a>
+    <div class="news-grid">
+      <div class="news-card reveal">
+        <div class="news-img ni1">🤰</div>
+        <div class="news-body">
+          <div class="news-date"><i class="fa fa-calendar"></i> 21 Aug 2018</div>
+          <div class="news-title">Morfologia fetală de trimestru I</div>
+          <p class="news-desc">Morfologia fetală de trimestru I sau ecografia de screening pentru anomalii cromozomiale se realizează între 11 săptămâni și 13 săptămâni și 6 zile.</p>
         </div>
       </div>
-      <div class="doc-card reveal">
-        <div class="doc-photo dp2">
-          <div class="doc-initials di2">DA</div>
-        </div>
-        <div class="doc-info">
-          <div class="doc-name">Dr. Alexandru Popa</div>
-          <div class="doc-spec">Ortodonție &amp; Aliniatori</div>
-          <p class="doc-bio">Ortodont specialist certificat Invisalign Diamond. Tratamente pentru copii și adulți cu rezultate excepționale în aliniere dentară.</p>
-          <a href="#contact" class="doc-link">Programare <i class="fa fa-arrow-right"></i></a>
+      <div class="news-card reveal">
+        <div class="news-img ni2">🧬</div>
+        <div class="news-body">
+          <div class="news-date"><i class="fa fa-calendar"></i> 21 Aug 2018</div>
+          <div class="news-title">Morfologia fetală de trimestru II</div>
+          <p class="news-desc">În formarea oricărui organism uman pot apărea erori ce duc la apariția malformațiilor congenitale. Ecografia de trimestru II este esențială pentru detectarea acestora.</p>
         </div>
       </div>
-      <div class="doc-card reveal">
-        <div class="doc-photo dp3">
-          <div class="doc-initials di3">DM</div>
-        </div>
-        <div class="doc-info">
-          <div class="doc-name">Dr. Mihaela Constantin</div>
-          <div class="doc-spec">Chirurgie Orală &amp; Parodontologie</div>
-          <p class="doc-bio">Chirurg oral cu doctorat în parodontologie. Expertă în regenerare osoasă, augmentări și tratamente parodontale complexe.</p>
-          <a href="#contact" class="doc-link">Programare <i class="fa fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TESTIMONIALE ═══ -->
-<section class="section testimonials" id="testimoniale">
-  <div class="container">
-    <div class="reveal" style="text-align:center;max-width:520px;margin:0 auto;">
-      <div class="chip" style="display:block;text-align:center;margin-bottom:.8rem;">Experiențele pacienților</div>
-      <h2 class="s-title">Pacienți fericiți</h2>
-      <div class="sep" style="margin:.9rem auto;"></div>
-    </div>
-    <div class="test-grid">
-      <div class="test-card reveal">
-        <div class="t-stars">★★★★★</div>
-        <p class="tq">"Am avut fațete ceramice aplicate de Dr. Ionescu și rezultatul este absolut uimitor. Zâmbetul meu s-a transformat complet! Profesioniști la cel mai înalt nivel."</p>
-        <div class="ta">
-          <div class="ta-av av1">A</div>
-          <div>
-            <div class="ta-name">Andreea Moga</div>
-            <div class="ta-treat">Fațete ceramice</div>
-          </div>
-          <div class="verified"><i class="fa fa-check-circle"></i>Verificat</div>
-        </div>
-      </div>
-      <div class="test-card reveal">
-        <div class="t-stars">★★★★★</div>
-        <p class="tq">"Clinica DentElite este cu adevărat o clinică premium. De la recepție la tratament, totul a fost impecabil. Implantul a reușit perfect, recomand cu toată încrederea."</p>
-        <div class="ta">
-          <div class="ta-av av2">G</div>
-          <div>
-            <div class="ta-name">George Nistor</div>
-            <div class="ta-treat">Implant dentar</div>
-          </div>
-          <div class="verified"><i class="fa fa-check-circle"></i>Verificat</div>
-        </div>
-      </div>
-      <div class="test-card reveal">
-        <div class="t-stars">★★★★★</div>
-        <p class="tq">"Fiul meu de 12 ani se temea groaznic de stomatolog. La DentElite, toată echipa a fost atât de răbdătoare și prietenoasă încât acum vine bucuros la controale!"</p>
-        <div class="ta">
-          <div class="ta-av av3">M</div>
-          <div>
-            <div class="ta-name">Monica Bălan</div>
-            <div class="ta-treat">Stomatologie pediatrică</div>
-          </div>
-          <div class="verified"><i class="fa fa-check-circle"></i>Verificat</div>
+      <div class="news-card reveal">
+        <div class="news-img ni3">🔬</div>
+        <div class="news-body">
+          <div class="news-date"><i class="fa fa-calendar"></i> 21 Aug 2018</div>
+          <div class="news-title">Screening ecografic materno-fetal</div>
+          <p class="news-desc">Screeningul în medicină reprezintă o conduită utilizată pentru a depista o anumită afecțiune. Este o metodă ce se adresează unor persoane aparent sănătoase.</p>
         </div>
       </div>
     </div>
@@ -632,46 +698,53 @@ footer{background:var(--dark);padding:3.5rem 4rem 2rem;}
 </section>
 
 <!-- ═══ CONTACT ═══ -->
-<section class="section contact" id="contact">
+<section class="section contact-section" id="contact">
   <div class="container">
-    <div class="reveal" style="text-align:center;max-width:520px;margin:0 auto 3.5rem;">
-      <div class="chip" style="display:block;text-align:center;margin-bottom:.8rem;">Rezervă consultație</div>
+    <div class="reveal" style="text-align:center;max-width:520px;margin:0 auto 3rem;">
+      <div class="chip chip-blue" style="margin-bottom:.8rem;">Rezervă consultație</div>
       <h2 class="s-title">Programează-te <em>online</em></h2>
-      <div class="sep" style="margin:.9rem auto;"></div>
+      <div class="sep" style="margin:.8rem auto;"></div>
       <p class="s-sub" style="margin:0 auto;">Completați formularul și vă contactăm în cel mai scurt timp pentru a confirma programarea.</p>
     </div>
     <div class="contact-grid">
       <div class="reveal-l">
-        <div class="contact-info">
-          <div class="ci-head"><i class="fa fa-map-pin"></i> Informații de contact</div>
+        <div class="contact-info-box">
+          <div class="ci-head"><i class="fa fa-map-pin"></i> Informații cabinet</div>
           <div class="ci-row">
             <div class="ci-ic"><i class="fa fa-map-marker-alt"></i></div>
-            <div><div class="ci-lbl">Adresă</div><div class="ci-val">Str. Dorobanților 28, Sibiu</div></div>
+            <div><div class="ci-lbl">Adresă</div><div class="ci-val">str. Victor Babeș nr. 22E, Baia Mare MM 430112</div></div>
           </div>
           <div class="ci-row">
             <div class="ci-ic"><i class="fa fa-phone"></i></div>
-            <div><div class="ci-lbl">Telefon</div><div class="ci-val">0269 xxx xxx</div></div>
+            <div><div class="ci-lbl">Telefon</div><div class="ci-val">+40 747 011 770</div></div>
           </div>
           <div class="ci-row">
             <div class="ci-ic"><i class="fa fa-envelope"></i></div>
-            <div><div class="ci-lbl">Email</div><div class="ci-val">programari@dentelite.ro</div></div>
+            <div><div class="ci-lbl">Email</div><div class="ci-val">drcostinmedica@gmail.com</div></div>
           </div>
         </div>
-        <div class="prog-box">
-          <div class="prog-head"><i class="fa fa-clock"></i> Program</div>
-          <div class="prog-row"><span class="prog-day">Luni – Vineri</span><span class="prog-time">8:00 – 20:00</span></div>
-          <div class="prog-row"><span class="prog-day">Sâmbătă</span><span class="prog-time">9:00 – 14:00</span></div>
-          <div class="prog-row"><span class="prog-day">Duminică</span><span class="prog-closed">Urgențe prioritare</span></div>
+        <div class="prog-section" style="margin-top:1.3rem;">
+          <div class="prog-section-title"><i class="fa fa-clock"></i>Program consultatii</div>
+          <div class="prog-dept">
+            <span class="prog-dept-name rose"><i class="fa fa-venus"></i> Obstetrică · Ginecologie — Dr. Bogdan Costin</span>
+            <div class="prog-row"><span class="prog-day-txt">Luni</span><span class="prog-time-txt">15:00 – 19:00</span></div>
+            <div class="prog-row"><span class="prog-day-txt">Miercuri</span><span class="prog-time-txt">15:00 – 19:00</span></div>
+          </div>
+          <div class="prog-dept">
+            <span class="prog-dept-name teal"><i class="fa fa-child"></i> Pediatrie · Endocrinologie — Dr. Octavia Costin</span>
+            <div class="prog-row"><span class="prog-day-txt">Marți</span><span class="prog-time-txt">15:00 – 19:00</span></div>
+            <div class="prog-row"><span class="prog-day-txt">Joi</span><span class="prog-time-txt">15:00 – 19:00</span></div>
+          </div>
         </div>
       </div>
       <div class="form-box reveal-r">
         <h3>Cerere de programare</h3>
-        <p>Suntem deschiși de luni până sâmbătă. Urgențele stomatologice sunt tratate prioritar — nu ezitați să ne contactați.</p>
+        <p>Completați formularul și vă contactăm în cel mai scurt timp pentru confirmare.</p>
         <form class="form" onsubmit="return false;">
           <div class="frow">
             <div class="fg">
               <label>Prenume <span class="req">*</span></label>
-              <input type="text" placeholder="Ion">
+              <input type="text" placeholder="ex. Ion">
             </div>
             <div class="fg">
               <label>Telefon <span class="req">*</span></label>
@@ -683,15 +756,26 @@ footer{background:var(--dark);padding:3.5rem 4rem 2rem;}
             <input type="email" placeholder="ion@exemplu.ro">
           </div>
           <div class="fg">
-            <label>Serviciu dorit <span class="req">*</span></label>
+            <label>Specialitate <span class="req">*</span></label>
+            <select>
+              <option value="" disabled selected>Alegeți specialitatea...</option>
+              <option>Obstetrică · Ginecologie — Dr. Bogdan Costin</option>
+              <option>Pediatrie · Endocrinologie — Dr. Octavia Costin</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Serviciu dorit</label>
             <select>
               <option value="" disabled selected>Alegeți serviciul...</option>
-              <option>Estetică dentară</option>
-              <option>Implantologie</option>
-              <option>Ortodonție</option>
-              <option>Profilaxie &amp; igienizare</option>
-              <option>Chirurgie orală</option>
-              <option>Stomatologie pediatrică</option>
+              <option>Consultație gravidă (include ecografia)</option>
+              <option>Ecografie morfologică fetală</option>
+              <option>Ecografie 3D/4D</option>
+              <option>Amniocenteză</option>
+              <option>Test Papanicolau</option>
+              <option>Colposcopie</option>
+              <option>Consultație ginecologică</option>
+              <option>Consultație pediatrică</option>
+              <option>Endocrinologie pediatrică</option>
               <option>Alt serviciu</option>
             </select>
           </div>
@@ -701,95 +785,100 @@ footer{background:var(--dark);padding:3.5rem 4rem 2rem;}
           </div>
           <div class="fg">
             <label>Mesaj (opțional)</label>
-            <textarea placeholder="Descrieți pe scurt problema sau întrebarea dumneavoastră..."></textarea>
+            <textarea placeholder="Descrieți pe scurt motivul consultației..."></textarea>
           </div>
           <div class="gdpr-row">
             <input type="checkbox" id="gdpr">
-            <label for="gdpr">Sunt de acord cu <a href="#">Politica GDPR</a> pentru prelucrarea datelor cu caracter personal.</label>
+            <label for="gdpr">Sunt de acord cu <a href="#">Politica GDPR</a> privind prelucrarea datelor cu caracter personal.</label>
           </div>
-          <div class="form-cta">
-            <button type="submit" class="btn-primary" style="font-size:.9rem;padding:.82rem 2rem;width:100%;">
-              <i class="fa fa-paper-plane"></i>Trimite cererea de programare
-            </button>
-          </div>
-          <div class="form-note" style="text-align:center;"><i class="fa fa-lock" style="color:var(--teal)"></i> Date securizate · Conform GDPR</div>
+          <button type="submit" class="btn-primary" style="width:100%;padding:.85rem;font-size:.9rem;justify-content:center;">
+            <i class="fa fa-paper-plane"></i>Trimite cererea de programare
+          </button>
+          <div class="form-note"><i class="fa fa-lock" style="color:var(--blue)"></i> Date securizate conform GDPR</div>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CTA BAND ═══ -->
+<!-- Map -->
+<div class="map-section">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.3!2d23.558463!3d47.663176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM5JzQ3LjQiTiAyM8KwMzMnMzAuNiJF!5e0!3m2!1sro!2sro!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<!-- CTA -->
 <div class="cta-band">
-  <h2>Primul pas spre zâmbetul tău <em>perfect</em></h2>
-  <p>Consultație inițială gratuită — evaluare completă, scanare 3D și plan de tratament personalizat, fără obligații.</p>
+  <h2>Programare rapidă,<br><em>îngrijire de încredere</em></h2>
+  <p>Sunăți sau completați formularul online. Vă confirmăm programarea în cel mai scurt timp.</p>
   <div class="cta-btns">
-    <a href="#contact" class="btn-white"><i class="fa fa-calendar-check"></i>Fă o programare</a>
-    <a href="tel:0269000000" class="btn-wghost"><i class="fa fa-phone"></i>0269 xxx xxx</a>
+    <a href="#contact" class="btn-white"><i class="fa fa-calendar-check"></i>Programare online</a>
+    <a href="tel:+40747011770" class="btn-wghost"><i class="fa fa-phone"></i>0747 011 770</a>
   </div>
   <div class="cta-trust">
-    <div class="cta-ti"><i class="fa fa-check-circle"></i>Consultație gratuită</div>
-    <div class="cta-ti"><i class="fa fa-check-circle"></i>Medici cu formare internațională</div>
-    <div class="cta-ti"><i class="fa fa-check-circle"></i>Urgențe tratate prioritar</div>
-    <div class="cta-ti"><i class="fa fa-check-circle"></i>Garanție tratamente</div>
+    <div class="cta-ti"><i class="fa fa-check-circle"></i>Ecograf Samsung 3D/4D</div>
+    <div class="cta-ti"><i class="fa fa-check-circle"></i>Sterilizare standarde UE</div>
+    <div class="cta-ti"><i class="fa fa-check-circle"></i>Medici cu supraspecializare</div>
+    <div class="cta-ti"><i class="fa fa-check-circle"></i>Teste genetice avansate</div>
   </div>
 </div>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- Footer -->
 <footer>
   <div class="container">
     <div class="ft-grid">
       <div>
-        <div class="ft-logo">Dent<span>Elite</span> Sibiu</div>
-        <p class="ft-desc">Clinică stomatologică premium în Sibiu, cu 12 ani de excelență în tratamente dentare moderne și estetice.</p>
+        <div class="ft-logo">Dr Costin <span>Medica</span></div>
+        <p class="ft-desc">Cabinet medical privat în Baia Mare. Obstetrică-Ginecologie și Pediatrie-Endocrinologie, cu aparatură de ultimă generație.</p>
         <div class="ft-socials">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="https://www.facebook.com/drcostinmedica" target="_blank"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
       <div class="ft-col">
-        <h4>Servicii</h4>
+        <h4>Specialități</h4>
         <ul>
-          <li><a href="#servicii">Estetică Dentară</a></li>
-          <li><a href="#servicii">Implantologie</a></li>
-          <li><a href="#servicii">Ortodonție</a></li>
-          <li><a href="#servicii">Profilaxie</a></li>
-          <li><a href="#servicii">Chirurgie Orală</a></li>
+          <li><a href="#ginecologie">Obstetrică · Ginecologie</a></li>
+          <li><a href="#pediatrie">Pediatrie · Endocrinologie</a></li>
+          <li><a href="#servicii">Servicii medicale</a></li>
+          <li><a href="#noutati">Noutăți</a></li>
         </ul>
       </div>
       <div class="ft-col">
-        <h4>Clinică</h4>
+        <h4>Cabinet</h4>
         <ul>
-          <li><a href="#tratamente">Tehnologie</a></li>
-          <li><a href="#echipa">Echipă</a></li>
-          <li><a href="#testimoniale">Recenzii</a></li>
+          <li><a href="#despre">Prezentare generală</a></li>
+          <li><a href="#medici">Echipa medicală</a></li>
           <li><a href="#contact">Programare</a></li>
           <li><a href="#">Politică GDPR</a></li>
         </ul>
       </div>
     </div>
     <div class="ft-bottom">
-      <p class="ft-copy">© 2025 DentElite. Toate drepturile rezervate. · Str. Dorobanților 28, Sibiu</p>
-      <div class="ft-brady">Website realizat de <a href="#">Brady Software</a></div>
+      <p class="ft-copy">© 2018 Dr Costin Medica. All Rights Reserved. · str. Victor Babeș nr. 22E, Baia Mare</p>
+      <div class="ft-brady">Website redesign by <a href="#">Brady Software</a></div>
     </div>
   </div>
 </footer>
 
 <script>
-// Mobile menu
 document.getElementById('hbg').addEventListener('click',()=>document.getElementById('mobmenu').classList.add('open'));
 document.getElementById('mobclose').addEventListener('click',closeMob);
 function closeMob(){document.getElementById('mobmenu').classList.remove('open');}
 
-// Date min today
 const dp=document.getElementById('datepick');
 if(dp) dp.min=new Date().toISOString().split('T')[0];
+
+// Tab servicii
+function showTab(id,btn,color){
+  document.querySelectorAll('.srv-content').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.srv-tab').forEach(el=>{el.classList.remove('active-rose','active-teal');});
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active-'+color);
+}
 
 // Scroll reveal
 const io=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>io.observe(el));
 </script>
 </body>
